@@ -15,14 +15,14 @@ let myHeading = document.querySelector("h1");
 function setUserName() {
     const myName = prompt("Please enter your name.");
     localStorage.setItem("name", myName);
-    myHeading.textContent = `About the future of the music, ${myName}`;
+    myHeading.textContent = `${myName}, learn about the future of the music.`;
   }
 
 if (!localStorage.getItem("name")) {
     setUserName();
   } else {
     const storedName = localStorage.getItem("name");
-    myHeading.textContent = `About the future of the music, ${storedName}`;
+    myHeading.textContent = `${storedName}, learn about the future of the music.`;
   }
 
 function setUserName() {
@@ -31,7 +31,7 @@ function setUserName() {
       setUserName();
     } else {
       localStorage.setItem("name", myName);
-      myHeading.textContent = `About the future of the music, ${myName}`;
+      myHeading.textContent = `${myName}, learn about the future of the music.`;
     }
   }
   
